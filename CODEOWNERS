@@ -1,2 +1,2 @@
 # Protect the Markdown files
-**/*.md         @legalclaimassistant/administrators
+**/*.md         @legalclaimassistant/devex
