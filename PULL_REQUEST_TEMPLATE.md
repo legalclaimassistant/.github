@@ -3,7 +3,7 @@
 |------|---------|
 | ⏱ Review time | <!-- ~5 min --> |
 | ⌨️ Change type | <!-- 🛠 Bug fix / ➕ New feature / 🗒 Docs / 🤷🏻‍♂️ Other --> |
-| 🔗 Related ticket | <!-- DV-1337 --> |
+| 🔗 Related ticket | <!-- 1337 --> |
 
 ---
 
