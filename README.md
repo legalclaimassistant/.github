@@ -1,4 +1,4 @@
-# GitHub Templates & Workflows
+# GitHub Templates & configuration
 
 This repository contains standardized templates and GitHub configurations for our organization.  
 It ensures that all repositories have consistent defaults for issues, pull requests, and automated workflows.
