@@ -1,0 +1,35 @@
+name: Sync Labels
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 1 * * *" # daily
+
+jobs:
+  labeler:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+      contents: read
+      repository-projects: write
+      administration: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sync labels
+        uses: crazy-max/ghaction-github-labeler@v5
+        with:
+          yaml-file: labels.yml
+          delete-other-labels: true
+      #     create-missing-labels: true
+      #     verbose: true
+
+      # - name: Commit labels
+      #   uses: stefanzweifel/git-auto-commit-action@v6
+      #   with:
+      #     commit_message: "Sync labels"
+      #     file_pattern: "labels.yml"
+      #     commit_author: "GitHub Actions <noreply@github.com>"
+      #     commit_email: "noreply@github.com"

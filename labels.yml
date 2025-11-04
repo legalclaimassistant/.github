@@ -1,0 +1,10 @@
+labels:
+  - name: major
+    color: f44336
+    description: Backward-incompatible or breaking changes
+  - name: minor
+    color: 4caf50
+    description: Backward-compatible feature additions
+  - name: patch
+    color: 2196f3
+    description: Backward-compatible bug fixes or trivial changes
