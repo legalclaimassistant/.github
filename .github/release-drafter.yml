@@ -1,0 +1,41 @@
+# Shared release-drafter configuration for every repository in the
+# organisation. A repository uses it with a .github/release-drafter.yml that
+# only contains:
+#
+#   _extends: .github
+#
+# and may override individual keys below that line. Tags carry no "v"
+# prefix (e.g. 0.12.0), matching the existing package tags.
+name-template: '$RESOLVED_VERSION'
+tag-template: '$RESOLVED_VERSION'
+categories:
+  - title: '🚀 Major'
+    label: 'major'
+  - title: '✨ Minor'
+    label: 'minor'
+  - title: '🩹 Patch'
+    label: 'patch'
+
+change-template: '- $TITLE (#$NUMBER) @$AUTHOR'
+no-changes-template: '- No changes'
+
+version-resolver:
+  major:
+    labels:
+      - 'major'
+  minor:
+    labels:
+      - 'minor'
+  patch:
+    labels:
+      - 'patch'
+  default: patch
+
+exclude-labels:
+  - 'skip-changelog'
+
+template: |
+  ## What's Changed
+  $CHANGES
+
+  **Full Changelog**: https://github.com/$OWNER/$REPOSITORY/compare/$PREVIOUS_TAG...$RESOLVED_VERSION
